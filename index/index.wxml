@@ -1,0 +1,19 @@
+<wxs module="filters" src="index.wxs"></wxs>
+<!--判断有几行，根据行数目
+  第几行index参数赋值在i变量上
+-->
+<block wx:for="{{listData.length%2?filters.toFix(listData.length/2)+1:listData.length/2}}" wx:for-index="i" wx:for-key="{{i}}" wx:key="i">
+  <view class="demo-row">
+  <!--每行循序2次，index参数赋值在j变量上-->
+    <block wx:for="{{2}}" wx:for-index="j" wx:for-item="{{item_j}}" wx:for-key="key_j" wx:key="j">
+      <!--此时数据的条数为i*2+j
+        行数*2+第几行
+      -->
+      <block wx:if="{{listData[i*2+j].text}}">
+        <view class="demo-item">
+          <view class="screen-data" data-index="{{i*2+j}}">{{listData[i*2+j].text}}</view>
+        </view>
+      </block>
+    </block>
+  </view>
+</block>

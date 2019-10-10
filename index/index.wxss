@@ -1,0 +1,19 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.demo-row{
+  display: flex;
+  justify-content:flex-start;
+}
+.demo-item{
+  margin-top: 24rpx;
+  width: 50%;
+}
+.demo-item .screen-data{
+  margin: 12rpx;
+  padding: 12rpx;
+  text-align: center;
+  border:1px solid #ccc;
+  border-radius: 8rpx;
+}
